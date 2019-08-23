@@ -18,6 +18,15 @@
         <gem.path>${basedir}/.rubygems</gem.path>
     </properties>
 
+    <!-- Repository for patient search criteria -->
+    <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+
     <dependencies>
 
 		<!-- 
@@ -255,6 +264,20 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Patient search criteria module -->
+        <dependency>
+		    <groupId>com.github.Reyano132.openmrs-module-patientsearchcriteria</groupId>
+		    <artifactId>patientsearch-api</artifactId>
+		    <version>v1.0.0</version>
+		    <scope>provided</scope>
+		</dependency>
+        <dependency>
+		    <groupId>com.github.Reyano132.openmrs-module-patientsearchcriteria</groupId>
+		    <artifactId>patientsearch-omod</artifactId>
+		    <version>v1.0.0</version>
+		    <scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -376,7 +399,7 @@
 						</goals>
 						<phase>generate-resources</phase>
 						<configuration>
-							<nodeVersion>v6.10.0</nodeVersion>
+							<nodeVersion>v6.17.0</nodeVersion>
 							<installDirectory>../</installDirectory>
 						</configuration>
 					</execution>
